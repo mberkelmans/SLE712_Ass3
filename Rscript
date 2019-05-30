@@ -31,3 +31,21 @@ download.file("https://raw.githubusercontent.com/markziemann/SLE712_files/master
 
 # reading in the growth data table with headers, sites and tree ID's as chars
 y<-read.table("growth_data.csv",header = T,stringsAsFactors = F,sep = ',')
+
+# subsetting the file for the northeast site, and storing the data in "b"
+b<-subset(y,Site == 'northeast')
+
+#obtaining the average 1999 circumference at the northeast site
+mean(b[,3])
+
+#obtaining the average 2019 circumference at the northeast site
+mean(b[,6])
+
+# subsetting the file for the southwest site, and storing the data in "c"
+c<-subset(y,Site == 'southwest')
+
+#obtaining the average 1999 circumference at the southwest site
+mean(c[,3])
+
+#obtaining the average 2019 circumference at the southwest site
+mean(c[,6])
