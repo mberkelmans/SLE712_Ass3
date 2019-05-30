@@ -1,17 +1,16 @@
 download.file("https://github.com/markziemann/SLE712_files/blob/master/week10_files/gene_expression.tsv",destfile = "gene_expression.tsv")
 
-read.table("gene_expression.tsv")
 x<-read.table("gene_expression.tsv",header = T,stringsAsFactors = F)
 head(x)
 str(x)
 
 download.file("https://github.com/markziemann/SLE712_files/blob/master/week10_files/growth_data.csv",destfile = "growth_data.csv")
 
-read.table("growth_data.csv")
-x<-read.table("growth_data.csv",header = T,stringsAsFactors = F)
-head(x)
-str(x)
+y<-read.table("growth_data.csv",header = T,stringsAsFactors = F)
+head(y)
+str(y)
 
+# probably not required
 write.table(mtcars,file="mtcars.csv",quote=F,sep=',')
 save.image("mydata.Rdata")
 load("mydata.Rdata"")
