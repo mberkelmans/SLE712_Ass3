@@ -3,7 +3,8 @@
 #format database
 formatdb -p F -o T -i Escherichia_coli_str_k_12_substr_mg1655.ASM584v2.cds.all.fa
 
-# loop through different nucleotide counts
+# loop through different counts of potential mismatch sites
+# starting at 50, then incrementing by 50 each iteration, stopping at 950
 for i in $(seq 50 50 950); do
 
 echo $i
