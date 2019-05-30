@@ -1,3 +1,5 @@
 # SLE712_Ass3
 
-In this repository there are two files. One is a shell script written in the bash language, named "myscript4.sh". The other is an R script. The shell script requires three input files; 
+In this repository there are two files. One is a shell script written in the bash language, named "myscript4.sh". The other is an R script. The shell script performs a BLAST comparison of a query sequence from https://github.com/markziemann/SLE712_files/blob/master/fasta_files/sample.fa (number 7) with an E.coli reference sequence, and the R script downloads two files from github and performs targeted analyses on them.
+
+The shell script requires two input files; one being a reference E.coli sequence named " Escherichia_coli_str_k_12_substr_mg1655.ASM584v2.cds.all.fa", and the other being a query sequence named "mysequence.fa". The query sequence can be obtained from https://github.com/markziemann/SLE712_files/blob/master/fasta_files/sample.fa (number 7). The script then runs 100 iterations of the BLAST with each of the following numbers of potential mismatch sites: 50,100,150,200,250,300,350,400,450,500,550,600,650,700,750,800,850,900,950. The goal of this script is to allow us to determine at approximately what number of mismatch sites does the query sequence become so different from the reference that BLAST is no longer able to find a match.
