@@ -21,6 +21,6 @@ blast2 -p blastn -e 0.001 -m 8 -d Escherichia_coli_str_k_12_substr_mg1655.ASM584
 # close loop 2 and add up the number of matches out of the 100 runs
 done | numsum
 
-# close loop 1
+# close loop 1 and save output file
 done  > output4.txt
 
