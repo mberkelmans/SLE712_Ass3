@@ -25,12 +25,6 @@ length(a)
 # creating a pairs plot of the dataset
 pairs(x[,2:3])
 
+# downloading growth data file into R
 download.file("https://raw.githubusercontent.com/markziemann/SLE712_files/master/week10_files/growth_data.csv",destfile = "growth_data.csv")
-y<-read.table("growth_data.csv",header = T,stringsAsFactors = F)
-head(y)
-str(y)
-
-# probably not required
-write.table(mtcars,file="mtcars.csv",quote=F,sep=',')
-save.image("mydata.Rdata")
-load("mydata.Rdata"")
+y<-read.table("growth_data.csv",header = T,stringsAsFactors = F,sep = ',')
