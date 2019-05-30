@@ -22,6 +22,9 @@ a<-which(x[,4]<10)
 # finding how many rows in "a"
 length(a)
 
+# creating a pairs plot of the dataset
+pairs(x[,2:3])
+
 download.file("https://raw.githubusercontent.com/markziemann/SLE712_files/master/week10_files/growth_data.csv",destfile = "growth_data.csv")
 y<-read.table("growth_data.csv",header = T,stringsAsFactors = F)
 head(y)
