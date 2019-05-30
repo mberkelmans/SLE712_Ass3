@@ -15,7 +15,6 @@ head(x)
   
 # listing the 6 genes with the highest mean expression
 head(x[order(-x$mean),])
-head(x)
 
 download.file("https://raw.githubusercontent.com/markziemann/SLE712_files/master/week10_files/growth_data.csv",destfile = "growth_data.csv")
 y<-read.table("growth_data.csv",header = T,stringsAsFactors = F)
