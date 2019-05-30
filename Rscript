@@ -1,7 +1,21 @@
+# downloading gene expression file into R
 download.file("https://raw.githubusercontent.com/markziemann/SLE712_files/master/week10_files/gene_expression.tsv",destfile = "gene_expression.tsv")
-x<-read.table("gene_expression.tsv",header = T,stringsAsFactors = F)
+
+# reading in the gene expression table with headers, accession no's as chars
+x<-read.table("gene_expression.tsv",header = T, stringsAsFactors = F)
+
+# creating variable z and storing the mean of the two exsting columns therein
+z<-(x[,2]+x[,3])/2
+
+# adding variable z to the table with a meaningful name
+x$mean<-z
+
+# checking that the column has been added correctly
 head(x)
-str(x)
+  
+# listing the 6 genes with the highest mean expression
+head(x[order(-x$mean),])
+head(x)
 
 download.file("https://raw.githubusercontent.com/markziemann/SLE712_files/master/week10_files/growth_data.csv",destfile = "growth_data.csv")
 y<-read.table("growth_data.csv",header = T,stringsAsFactors = F)
