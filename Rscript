@@ -35,21 +35,21 @@ y<-read.table("growth_data.csv",header = T,stringsAsFactors = F,sep = ',')
 # subsetting the file for the northeast site, and storing the data in "b"
 b<-subset(y,Site == 'northeast')
 
-#obtaining the average 1999 circumference at the northeast site, and its standard deviation
+# obtaining the average 1999 circumference at the northeast site, and its standard deviation
 mean(b[,3])
 sd(b[,3])
 
-#obtaining the average 2019 circumference at the northeast site, and its standard deviation
+# obtaining the average 2019 circumference at the northeast site, and its standard deviation
 mean(b[,6])
 sd(b[,6])
 
 # subsetting the file for the southwest site, and storing the data in "c"
 c<-subset(y,Site == 'southwest')
 
-#obtaining the average 1999 circumference at the southwest site, and its standard deviation
+# obtaining the average 1999 circumference at the southwest site, and its standard deviation
 mean(c[,3])
 sd(c[,3])
 
-#obtaining the average 2019 circumference at the southwest site, and its standard deviation
+# obtaining the average 2019 circumference at the southwest site, and its standard deviation
 mean(c[,6])
 sd(c[,6])
