@@ -2,6 +2,7 @@
 download.file("https://raw.githubusercontent.com/markziemann/SLE712_files/master/week10_files/gene_expression.tsv",destfile = "gene_expression.tsv")
 
 # reading in the gene expression table with headers, accession no's as chars
+# saving the table as variable "x"
 x<-read.table("gene_expression.tsv",header = T, stringsAsFactors = F)
 
 # creating variable z and storing the mean of the two exsting columns therein
@@ -27,4 +28,6 @@ pairs(x[,2:3])
 
 # downloading growth data file into R
 download.file("https://raw.githubusercontent.com/markziemann/SLE712_files/master/week10_files/growth_data.csv",destfile = "growth_data.csv")
+
+# reading in the growth data table with headers, sites and tree ID's as chars
 y<-read.table("growth_data.csv",header = T,stringsAsFactors = F,sep = ',')
