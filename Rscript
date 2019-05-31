@@ -53,3 +53,18 @@ sd(c[,3])
 # obtaining the average 2019 circumference at the southwest site, and its standard deviation
 mean(c[,6])
 sd(c[,6])
+
+# saving data and labels to variables to set up the boxplot
+d <-b$Circumf_1999_cm
+e <-c$Circumf_1999_cm
+f <-b$Circumf_2019_cm
+g <-c$Circumf_2019_cm
+labels<-c("NE 1999","SW 1999","NE 2019","SW 2019")
+
+# setting a wider left-hand margin to accommodate the labels
+par(mar=c(5,6,4,1)
+
+# creating a boxplot of the 1999 and 2019 circumferences at both sites
+boxplot(d,e,f,g,horizontal = T,names=labels,las=2,
+main = "Circumference comparison between sites, 1999 and 2019", 
+xlab = "tree circumference (cm)")
